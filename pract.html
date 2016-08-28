@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+
+
+</head>
+
+<body style="text-align:center;">
+    <p>間違い探しの問題文を入力して下さい。
+        <br>(例:「舂」と「春」など)</p>
+    <form id="id_form1" name="fm" class="" action="index.html" method="post">
+        <input type="text" id="textBox1" name="aaa">
+        <input type="text" id="textBox2" name="bbb">
+        <input type="button" name="name" value="作成する" onclick="func()">
+        <input type="button" name="name" value="おまかせモード" onclick="omakase()">
+
+        <!-- <input type="button" name="name" value="自分で書いたやつ" onclick="func2()">
+    </form> -->
+        <div id="cando" style="display: none;">あああああ</div>
+
+
+        <script>
+
+            function func() {
+              var textBoxx = document.getElementById('textBox1');
+              var textBoxy = document.getElementById('textBox2');
+              console.log(textBoxx);
+              var val = textBoxx.value;
+              var val2 = textBoxy.value;
+              console.log(val);
+                if (val == "" || val2 == "") {
+                    //alert("両方の空欄に文字を入力して下さい");
+                    return false;
+                } else {
+                    var i = 0;
+                    for (i = 0; i <= 1200; i++) {
+                        var k = Math.floor(Math.random() * 500) + 1;
+                        if (k != 60) {
+                            document.write(val);
+                        } else {
+                            //window.document.write(document.fm.bbb.value);
+                            //alert(document.fm.bbb.value);
+                            document.write(val2);
+                            console.log(val2);
+                        }
+                    }
+                }
+            }
+            function func2() {
+                var i = 0;
+                for (i = 0; i <= 1500; i++) {
+                    console.log("a");
+                    var k = Math.floor(Math.random() * 500) + 1;
+                    if (k == 60) {
+                        window.document.write("丼");
+                    } else {
+                        window.document.write("井");
+                    }
+                }
+            }
+            function omakase(){
+              alert("なんか適当に面白い間違い探しの問題が出て来る");
+            }
+        </script>
+</body>
+</html>
